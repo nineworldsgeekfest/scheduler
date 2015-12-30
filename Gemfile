@@ -42,6 +42,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
 
+  # capybara-webkit setup. Requires xvfc and QT installed to succeed
+  gem 'capybara-webkit'
+
 end
 
 group :development do

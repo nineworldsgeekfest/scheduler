@@ -6,5 +6,10 @@ services:
 before_script:
  - cp config/database.yml.travis config/database.yml
  - psql -c 'create database travis_ci_test;' -U postgres
+ # Settings to run xvfb for headless browser testing
+ # Further info at https://docs.travis-ci.com/user/gui-and-headless-browsers/
+ - "export DISPLAY=:99.0"
+ - "sh -e /etc/init.d/xvfb start"
+ - sleep 3 # give xvfb some time to start
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
