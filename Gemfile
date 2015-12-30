@@ -36,6 +36,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  # For initial rspec and capybara setup. Added to development as well as test
+  # to meet recommendations from https://relishapp.com/rspec/rspec-rails/docs
+  gem 'rspec-rails'
+  gem 'capybara'
+
+  # capybara-webkit setup. Requires xvfc and QT installed to succeed
+  gem 'capybara-webkit'
+
 end
 
 group :development do
