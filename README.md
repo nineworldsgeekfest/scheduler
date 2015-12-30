@@ -1,7 +1,11 @@
 # scheduler
 Scheduling solution for a content-heavy conference, built on Rails
 
+## Status badges
+
 [![Stories in Ready](https://badge.waffle.io/nineworldsgeekfest/scheduler.png?label=ready&title=Ready)](http://waffle.io/nineworldsgeekfest/scheduler)
+
+[![Build Status](https://travis-ci.org/nineworldsgeekfest/scheduler.svg?branch=master)](https://travis-ci.org/nineworldsgeekfest/scheduler)
 
 ## Build notes
 
