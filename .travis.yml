@@ -7,7 +7,7 @@ before_script:
  - cp config/database.yml.travis config/database.yml
  - psql -c 'create database travis_ci_test;' -U postgres
  # Attempt to run db migrations and resolve error
- - bin/rake db:migrate RAILS_ENV=test
+ - bundle exec rake db:migrate
  # Settings to run xvfb for headless browser testing
  # Further info at https://docs.travis-ci.com/user/gui-and-headless-browsers/
  - "export DISPLAY=:99.0"
