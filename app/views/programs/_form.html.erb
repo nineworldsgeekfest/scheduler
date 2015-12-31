@@ -1,0 +1,69 @@
+<%= form_for(@program) do |f| %>
+  <% if @program.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@program.errors.count, "error") %> prohibited this program from being saved:</h2>
+
+      <ul>
+      <% @program.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.time_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitle %><br>
+    <%= f.text_field :subtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :activity_type %><br>
+    <%= f.text_field :activity_type %>
+  </div>
+  <div class="field">
+    <%= f.label :short_description %><br>
+    <%= f.text_field :short_description %>
+  </div>
+  <div class="field">
+    <%= f.label :long_description %><br>
+    <%= f.text_area :long_description %>
+  </div>
+  <div class="field">
+    <%= f.label :loc %><br>
+    <%= f.text_field :loc %>
+  </div>
+  <div class="field">
+    <%= f.label :mins %><br>
+    <%= f.number_field :mins %>
+  </div>
+  <div class="field">
+    <%= f.label :flag_id %><br>
+    <%= f.text_field :flag_id %>
+  </div>
+  <div class="field">
+    <%= f.label :track_id %><br>
+    <%= f.text_field :track_id %>
+  </div>
+  <div class="field">
+    <%= f.label :person_id %><br>
+    <%= f.text_field :person_id %>
+  </div>
+  <div class="field">
+    <%= f.label :conference_id %><br>
+    <%= f.text_field :conference_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

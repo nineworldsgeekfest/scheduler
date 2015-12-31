@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231165701) do
+ActiveRecord::Schema.define(version: 20151231171951) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,29 @@ ActiveRecord::Schema.define(version: 20151231165701) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "programs", force: :cascade do |t|
+    t.date     "start_date"
+    t.time     "start_time"
+    t.string   "title"
+    t.string   "subtitle"
+    t.string   "activity_type"
+    t.string   "short_description"
+    t.text     "long_description"
+    t.string   "loc"
+    t.integer  "mins"
+    t.integer  "flag_id"
+    t.integer  "track_id"
+    t.integer  "person_id"
+    t.integer  "conference_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "programs", ["conference_id"], name: "index_programs_on_conference_id", using: :btree
+  add_index "programs", ["flag_id"], name: "index_programs_on_flag_id", using: :btree
+  add_index "programs", ["person_id"], name: "index_programs_on_person_id", using: :btree
+  add_index "programs", ["track_id"], name: "index_programs_on_track_id", using: :btree
+
   create_table "tracks", force: :cascade do |t|
     t.string   "name"
     t.string   "short_description"
@@ -55,5 +78,9 @@ ActiveRecord::Schema.define(version: 20151231165701) do
 
   add_index "tracks", ["conference_id"], name: "index_tracks_on_conference_id", using: :btree
 
+  add_foreign_key "programs", "conferences"
+  add_foreign_key "programs", "flags"
+  add_foreign_key "programs", "people"
+  add_foreign_key "programs", "tracks"
   add_foreign_key "tracks", "conferences"
 end
