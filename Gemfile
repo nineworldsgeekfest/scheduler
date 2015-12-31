@@ -45,6 +45,9 @@ group :development, :test do
   # capybara-webkit setup. Requires xvfc and QT installed to succeed
   gem 'capybara-webkit'
 
+  # Used to clean database tables between tests
+  gem 'database_cleaner'
+
 end
 
 group :development do
