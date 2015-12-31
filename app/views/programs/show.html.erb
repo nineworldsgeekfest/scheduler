@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @program.start_date %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @program.start_time %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @program.title %>
+</p>
+
+<p>
+  <strong>Subtitle:</strong>
+  <%= @program.subtitle %>
+</p>
+
+<p>
+  <strong>Activity type:</strong>
+  <%= @program.activity_type %>
+</p>
+
+<p>
+  <strong>Short description:</strong>
+  <%= @program.short_description %>
+</p>
+
+<p>
+  <strong>Long description:</strong>
+  <%= @program.long_description %>
+</p>
+
+<p>
+  <strong>Loc:</strong>
+  <%= @program.loc %>
+</p>
+
+<p>
+  <strong>Mins:</strong>
+  <%= @program.mins %>
+</p>
+
+<p>
+  <strong>Flag:</strong>
+  <%= @program.flag %>
+</p>
+
+<p>
+  <strong>Track:</strong>
+  <%= @program.track %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @program.person %>
+</p>
+
+<p>
+  <strong>Conference:</strong>
+  <%= @program.conference %>
+</p>
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>
