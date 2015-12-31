@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tracks
   resources :people
   resources :conferences
   # The priority is based upon order of creation: first created -> highest priority.
