@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :flags
   resources :tracks
   resources :people
   resources :conferences
