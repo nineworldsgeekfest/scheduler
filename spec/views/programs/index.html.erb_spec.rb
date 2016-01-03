@@ -11,9 +11,6 @@ RSpec.describe "programs/index", type: :view do
         :long_description => "MyText",
         :loc => "Loc",
         :mins => 1,
-        :flag => nil,
-        :track => nil,
-        :person => nil,
         :conference => nil
       ),
       Program.create!(
@@ -24,9 +21,6 @@ RSpec.describe "programs/index", type: :view do
         :long_description => "MyText",
         :loc => "Loc",
         :mins => 1,
-        :flag => nil,
-        :track => nil,
-        :person => nil,
         :conference => nil
       )
     ])
@@ -42,9 +36,6 @@ RSpec.describe "programs/index", type: :view do
     assert_select "tr>td", :text => "Loc".to_s, :count => 2
     assert_select "tr>td", :text => 1.to_s, :count => 2
     # the following were scaffolded by rails, but make no sense at present
-    # assert_select "tr>td", :text => nil.to_s, :count => 2
-    # assert_select "tr>td", :text => nil.to_s, :count => 2
-    # assert_select "tr>td", :text => nil.to_s, :count => 2
     # assert_select "tr>td", :text => nil.to_s, :count => 2
   end
 end
