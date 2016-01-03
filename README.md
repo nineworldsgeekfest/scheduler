@@ -22,6 +22,13 @@ Scheduling solution for a content-heavy conference, built on Rails
   * The approach to back and front end testing roughly follows [this advice from Thoughtbot](https://robots.thoughtbot.com/how-we-test-rails-applications).
 * Once these pre-requisites have been satisfied, you should be able to run the setup script at bin/setup.
 
+## Development process
+
+* All work should be performed on a separate branch, which is then pushed to the Github repository.
+* A pull request into master should then be created for that branch, which will trigger Hound and Travis.
+* The pull request will be reviewed by another committer, and either merged, or have further changes requested.
+* Pull requests which either break Travis or cause Hound style violations will not be merged until these are resolved.
+
 ## Style notes
 
 * Hound CI uses Rubocop with the [community Ruby style guide](https://github.com/bbatsov/ruby-style-guide) and so do we. All pull requests will return in-line comments on style violations. 
