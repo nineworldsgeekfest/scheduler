@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231171951) do
+ActiveRecord::Schema.define(version: 20160103151614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,11 @@ ActiveRecord::Schema.define(version: 20151231171951) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "flags_programs", id: false, force: :cascade do |t|
+    t.integer "program_id", null: false
+    t.integer "flag_id",    null: false
+  end
+
   create_table "people", force: :cascade do |t|
     t.text     "bio"
     t.string   "link_bio"
@@ -43,6 +48,11 @@ ActiveRecord::Schema.define(version: 20151231171951) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "people_programs", id: false, force: :cascade do |t|
+    t.integer "program_id", null: false
+    t.integer "person_id",  null: false
+  end
+
   create_table "programs", force: :cascade do |t|
     t.date     "start_date"
     t.time     "start_time"
@@ -53,18 +63,17 @@ ActiveRecord::Schema.define(version: 20151231171951) do
     t.text     "long_description"
     t.string   "loc"
     t.integer  "mins"
-    t.integer  "flag_id"
-    t.integer  "track_id"
-    t.integer  "person_id"
     t.integer  "conference_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
 
   add_index "programs", ["conference_id"], name: "index_programs_on_conference_id", using: :btree
-  add_index "programs", ["flag_id"], name: "index_programs_on_flag_id", using: :btree
-  add_index "programs", ["person_id"], name: "index_programs_on_person_id", using: :btree
-  add_index "programs", ["track_id"], name: "index_programs_on_track_id", using: :btree
+
+  create_table "programs_tracks", id: false, force: :cascade do |t|
+    t.integer "program_id", null: false
+    t.integer "track_id",   null: false
+  end
 
   create_table "tracks", force: :cascade do |t|
     t.string   "name"
@@ -79,8 +88,5 @@ ActiveRecord::Schema.define(version: 20151231171951) do
   add_index "tracks", ["conference_id"], name: "index_tracks_on_conference_id", using: :btree
 
   add_foreign_key "programs", "conferences"
-  add_foreign_key "programs", "flags"
-  add_foreign_key "programs", "people"
-  add_foreign_key "programs", "tracks"
   add_foreign_key "tracks", "conferences"
 end

@@ -10,9 +10,6 @@ RSpec.describe "programs/edit", type: :view do
       :long_description => "MyText",
       :loc => "MyString",
       :mins => 1,
-      :flag => nil,
-      :track => nil,
-      :person => nil,
       :conference => nil
     ))
   end
@@ -35,12 +32,6 @@ RSpec.describe "programs/edit", type: :view do
       assert_select "input#program_loc[name=?]", "program[loc]"
 
       assert_select "input#program_mins[name=?]", "program[mins]"
-
-      assert_select "input#program_flag_id[name=?]", "program[flag_id]"
-
-      assert_select "input#program_track_id[name=?]", "program[track_id]"
-
-      assert_select "input#program_person_id[name=?]", "program[person_id]"
 
       assert_select "input#program_conference_id[name=?]", "program[conference_id]"
     end

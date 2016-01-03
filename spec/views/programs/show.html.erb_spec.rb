@@ -10,9 +10,6 @@ RSpec.describe "programs/show", type: :view do
       :long_description => "MyText",
       :loc => "Loc",
       :mins => 1,
-      :flag => nil,
-      :track => nil,
-      :person => nil,
       :conference => nil
     ))
   end
@@ -26,9 +23,6 @@ RSpec.describe "programs/show", type: :view do
     expect(rendered).to match(/MyText/)
     expect(rendered).to match(/Loc/)
     expect(rendered).to match(/1/)
-    expect(rendered).to match(//)
-    expect(rendered).to match(//)
-    expect(rendered).to match(//)
     expect(rendered).to match(//)
   end
 end
