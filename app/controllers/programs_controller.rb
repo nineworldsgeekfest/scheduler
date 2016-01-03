@@ -69,6 +69,7 @@ class ProgramsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def program_params
-      params.require(:program).permit(:start_date, :start_time, :title, :subtitle, :activity_type, :short_description, :long_description, :loc, :mins, :conference_id)
+      params.require(:program).permit(:start_date, :start_time, :title, :subtitle, :activity_type, 
+        :short_description, :long_description, :loc, :mins, :conference_id)
     end
 end
