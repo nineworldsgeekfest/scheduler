@@ -11,7 +11,7 @@ Scheduling solution for a content-heavy conference, built on Rails
 
 * Rails 4.2.5 is the current base install. Ruby version is defined in Gemfile as 2.2.1, with automatic RVM config in .ruby-gemset and .ruby-version.
 * To get started, you should [obtain RVM](https://rvm.io/), and execute `rvm install 2.2.1; rvm use 2.2.1; rvm gemset create scheduler`
-* PostgreSQL is the database, and [requires setup on each development instance](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-14-04). `development` and `test` environmnts currently make the following assumptions:
+* PostgreSQL is the database, and [requires setup on each development instance](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-ubuntu-14-04). `development` and `test` environments currently make the following assumptions:
   * The database is located on `localhost` and is accessible via UNIX socket
   * The PostgreSQL user matching your username can be authenticated as the current user via a passwordless authentication mechanism. You may need to edit your `pg_hba.conf` to achieve this - setting your user to `peer` authentication via UNIX sockets is a working method.
   * The PostgreSQL user has the `CREATEDB` privilege (as `postgres` execute `ALTER USER {username} CREATEDB`)
