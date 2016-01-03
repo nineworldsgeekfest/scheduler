@@ -7,6 +7,8 @@ Scheduling solution for a content-heavy conference, built on Rails
 
 [![Build Status](https://travis-ci.org/nineworldsgeekfest/scheduler.svg?branch=master)](https://travis-ci.org/nineworldsgeekfest/scheduler)
 
+[![Coverage Status](https://coveralls.io/repos/nineworldsgeekfest/scheduler/badge.svg?branch=master&service=github)](https://coveralls.io/github/nineworldsgeekfest/scheduler?branch=master)
+
 ## How to get started developing on this project
 
 * Rails 4.2.5 is the current base install. Ruby version is defined in Gemfile as 2.2.1, with automatic RVM config in .ruby-gemset and .ruby-version.
@@ -17,7 +19,7 @@ Scheduling solution for a content-heavy conference, built on Rails
   * The PostgreSQL user has the `CREATEDB` privilege (as `postgres` execute `ALTER USER {username} CREATEDB`)
   * Heroku users should be fine, as long as the `DATABASE_URL` is set in the environment. Likewise, if you wish to override these settings, you can also craft a `DATABASE_URL` environment variable to do so.
 * `capybara-webkit` is required by this project and will be installed automatically into your gemset by `bundler`.
-  * It depends upon [Qt being installed](https://github.com/thoughtbot/capybara-webkit), and preferably Qt5. This can be achieved with `brew install qt` on OSX, or `sudo apt-get install qt5-default libqt5webkit5-dev` on Linux Mint. 
+  * It depends upon [Qt being installed](https://github.com/thoughtbot/capybara-webkit), and preferably Qt5. This can be achieved with `brew install qt` on OSX, or `sudo apt-get install qt5-default libqt5webkit5-dev` on Linux Mint.
   * It also depends upon a JS driver of some description, so you may need to `sudo apt-get install nodejs` too, if you don't already have one installed.
   * The approach to back and front end testing roughly follows [this advice from Thoughtbot](https://robots.thoughtbot.com/how-we-test-rails-applications).
 * Once these pre-requisites have been satisfied, you should be able to run the setup script at bin/setup.
@@ -25,11 +27,11 @@ Scheduling solution for a content-heavy conference, built on Rails
 ## Development process
 
 * All work should be performed on a separate branch, which is then pushed to the Github repository.
-* A pull request into master should then be created for that branch, which will trigger Hound and Travis.
+* A pull request into master should then be created for that branch, which will trigger Hound, Travis and Coveralls.
 * The pull request will be reviewed by another committer, and either merged, or have further changes requested.
 * Pull requests which either break Travis or cause Hound style violations will not be merged until these are resolved.
 
 ## Style notes
 
-* Hound CI uses Rubocop with the [community Ruby style guide](https://github.com/bbatsov/ruby-style-guide) and so do we. All pull requests will return in-line comments on style violations. 
+* Hound CI uses Rubocop with the [community Ruby style guide](https://github.com/bbatsov/ruby-style-guide) and so do we. All pull requests will return in-line comments on style violations.
 * Rubocop is included in the Gemfile under dev and can be used to find and fix style issues on your local dev environment.
