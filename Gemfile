@@ -48,6 +48,9 @@ group :development, :test do
   # Used to clean database tables between tests
   gem 'database_cleaner'
 
+  # Provides test coverage checking
+  gem 'coveralls', require: false
+
 end
 
 group :development do
