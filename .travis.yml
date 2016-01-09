@@ -8,6 +8,7 @@ before_script:
  - psql -c 'create database travis_ci_test;' -U postgres
  # Attempt to run db migrations and resolve error
  - bundle exec rake db:migrate
+ - bundle exec rake secrets:generate
  # Settings to run xvfb for headless browser testing
  # Further info at https://docs.travis-ci.com/user/gui-and-headless-browsers/
  - "export DISPLAY=:99.0"
