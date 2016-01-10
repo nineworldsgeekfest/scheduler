@@ -51,6 +51,21 @@ There are a few gems that may be included later in development to improve testin
 * Hound CI uses Rubocop with the [community Ruby style guide](https://github.com/bbatsov/ruby-style-guide) and so do we. All pull requests will return in-line comments on style violations.
 * Rubocop is included in the Gemfile under dev and can be used to find and fix style issues on your local dev environment.
 
+## Deploying the project to Heroku
+
+We're using Heroku as a handy way of trying out the project on a live platform with minimal fuss. To deploy to Heroku:
+
+* You'll need a Heroku account. Sign up at https://www.heroku.com/ if necessary.
+* Set up a dev environment using the instructions above, and use git to clone the project to your local environment.
+* Follow [these instructions from Heroku's site](https://devcenter.heroku.com/articles/getting-started-with-rails4) to set up Heroku toolbelt, log in to Heroku CLI, create a dyno, push your master branch to the dyno, and migrate the database schema.
+* If you just want to deploy the master branch, the Heroku instructions will see you right. If you want to deploy a different branch, use `git push -f heroku local-topic-branch:refs/heads/master` to deploy your current branch to Heroku.
+* `Heroku run rake db:[whatever]` is your friend for sorting out the database. We may add the option to generate test data at a later point.
+
+There are some Heroku-specific modifications to the codebase:
+
+* `production.rb` has a line that creates a secret key on the dyno.
+* Gem `rails_12factor` in Gemfile is required for Heroku.
+
 ## Contributor Code of Conduct
 
 As contributors and maintainers of this project, and in the interest of
