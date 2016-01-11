@@ -16,3 +16,6 @@ before_script:
  - sleep 3 # give xvfb some time to start
 # uncomment this line if your project needs to run something other than `rake`:
 # script: bundle exec rspec spec
+addons:
+    code_climate:
+        repo_token: 33eaecc563a18553140222aeb215b3f5174a5180f36ee4bc8d5963fab3a88cf9

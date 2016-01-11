@@ -9,6 +9,11 @@ Scheduling solution for a content-heavy conference, built on Rails
 
 [![Coverage Status](https://coveralls.io/repos/nineworldsgeekfest/scheduler/badge.svg?branch=master&service=github)](https://coveralls.io/github/nineworldsgeekfest/scheduler?branch=master)
 
+[![Code Climate](https://codeclimate.com/github/nineworldsgeekfest/scheduler/badges/gpa.svg)](https://codeclimate.com/github/nineworldsgeekfest/scheduler)
+
+[![Test Coverage](https://codeclimate.com/github/nineworldsgeekfest/scheduler/badges/coverage.svg)](https://codeclimate.com/github/nineworldsgeekfest/scheduler/coverage)
+
+
 ## How to get started developing on this project
 
 * Rails 4.2.5 is the current base install. Ruby version is defined in Gemfile as 2.2.1, with automatic RVM config in .ruby-gemset and .ruby-version.

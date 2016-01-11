@@ -54,7 +54,7 @@ group :development, :test do
   gem 'database_cleaner'
 
   # Provides test coverage checking
-  gem 'coveralls', require: false
+  gem "codeclimate-test-reporter", require: nil
 
 end
 
