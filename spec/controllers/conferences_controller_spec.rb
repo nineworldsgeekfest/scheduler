@@ -24,11 +24,20 @@ RSpec.describe ConferencesController, type: :controller do
   # Conference. As you add validations to Conference, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    return {
+      name: "Nine Worlds 2015",
+      start_date: "2015-08-07",
+      end_date: "2015-08-09"
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    return{
+      unexpected: "attribute",
+      name: 1000,
+      start_date: "not a date",
+      end_date: "0000-00-32"
+    }
   }
 
   # This should return the minimal set of values that should be in the session
