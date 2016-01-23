@@ -27,6 +27,8 @@ Scheduling solution for a content-heavy conference, built on Rails
   * The approach to back and front end testing roughly follows [this advice from Thoughtbot](https://robots.thoughtbot.com/how-we-test-rails-applications).
 * Once these pre-requisites have been satisfied, you should be able to run the setup script at bin/setup.
 
+Alternatively, a [dockerisation is available as a GitHub repo](https://github.com/nineworldsgeekfest/schedulerdockerised).
+
 ## Development process
 
 * All work should be performed on a separate branch, which is then pushed to the Github repository.
