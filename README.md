@@ -7,8 +7,6 @@ Scheduling solution for a content-heavy conference, built on Rails
 
 [![Build Status](https://travis-ci.org/nineworldsgeekfest/scheduler.svg?branch=master)](https://travis-ci.org/nineworldsgeekfest/scheduler)
 
-[![Coverage Status](https://coveralls.io/repos/nineworldsgeekfest/scheduler/badge.svg?branch=master&service=github)](https://coveralls.io/github/nineworldsgeekfest/scheduler?branch=master)
-
 [![Code Climate](https://codeclimate.com/github/nineworldsgeekfest/scheduler/badges/gpa.svg)](https://codeclimate.com/github/nineworldsgeekfest/scheduler)
 
 [![Test Coverage](https://codeclimate.com/github/nineworldsgeekfest/scheduler/badges/coverage.svg)](https://codeclimate.com/github/nineworldsgeekfest/scheduler/coverage)
@@ -28,6 +26,8 @@ Scheduling solution for a content-heavy conference, built on Rails
   * It also depends upon a JS driver of some description, so you may need to `sudo apt-get install nodejs` too, if you don't already have one installed.
   * The approach to back and front end testing roughly follows [this advice from Thoughtbot](https://robots.thoughtbot.com/how-we-test-rails-applications).
 * Once these pre-requisites have been satisfied, you should be able to run the setup script at bin/setup.
+
+Alternatively, a [dockerisation is available as a GitHub repo](https://github.com/nineworldsgeekfest/schedulerdockerised).
 
 ## Development process
 
